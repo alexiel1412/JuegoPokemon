@@ -18,6 +18,8 @@ public class Inicio
         System.out.println(separador);
         System.out.println("    Por favor, responde a las siguientes preguntas.");
         System.out.println(separador);
-        ArrayList<ArrayList> basicsData = Funciones.createBasicsData();
+        sc.nextLine();
+        
+        ArrayList<ArrayList<String>> basicsData = Funciones.createBasicsData();
 	}
 }

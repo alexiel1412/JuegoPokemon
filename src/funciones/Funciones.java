@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Funciones
 {
-    public static ArrayList<ArrayList> createBasicsData()
+    public static ArrayList<ArrayList<String>> createBasicsData()
     {
     	ArrayList<String> region = new ArrayList<String>();
         region.add("Kanto");
@@ -38,7 +38,7 @@ public class Funciones
         teselia.add("Tepig");
         teselia.add("Oshawott");
 
-        ArrayList<ArrayList> iniciales = new ArrayList<ArrayList>();
+        ArrayList<ArrayList<String>> iniciales = new ArrayList<ArrayList<String>>();
         iniciales.add(kanto);
         iniciales.add(jhoto);
         iniciales.add(hoenn);
@@ -52,9 +52,9 @@ public class Funciones
         rivalsNames.add("Paul");
         rivalsNames.add("N");
 
-        ArrayList<ArrayList> basicsData = new ArrayList<ArrayList>();
+        ArrayList<ArrayList<String>> basicsData = new ArrayList<ArrayList<String>>();
         basicsData.add(region);
-        basicsData.add(iniciales);
+        // basicsData.add(iniciales);
         basicsData.add(rivalsNames);
 
         return basicsData;
