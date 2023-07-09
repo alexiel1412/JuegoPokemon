@@ -3,6 +3,7 @@ package principal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import clases.Region;
 import funciones.Funciones;
 
 public class Inicio
@@ -20,6 +21,7 @@ public class Inicio
         System.out.println(separador);
         sc.nextLine();
         
-        ArrayList<ArrayList<String>> basicsData = Funciones.createBasicsData();
+        Region basicsData = Funciones.createBasicsData("JhoTO");
+        System.out.println(basicsData);
 	}
 }
