@@ -8,7 +8,7 @@ public class Trainer
     private static int numTrainer = 0;
     private String id;
     private String name;
-    private Region region;
+    private String region;
     private int money;
     private ArrayList<Pokemon> equipoPokemon;
     //private ArrayList<String> medals;
@@ -25,7 +25,7 @@ public class Trainer
     {
         this.setId(this.prepareID(++numTrainer));
         this.setName("Entrenador " + numTrainer);
-        //this.setRegion(new Region());
+        this.setRegion("");
         this.setMoney(0);
     }
     
@@ -39,35 +39,35 @@ public class Trainer
     {
         this.setId(this.prepareID(++numTrainer));
         this.setName(name);
-        //this.setRegion(new Region());
+        this.setRegion("Kanto");
         this.setMoney(0);
         this.setAPokemon(new Pokemon());
     }
 
     //Constructor para crear un nuevo entrenador pasándole sus datos iniciales
-    public Trainer(String aName, Region aRegion, Pokemon aInitialPokemon)
+    public Trainer(String aName, String aRegion, Pokemon aInitialPokemon)
     {
         this.equipoPokemon = new ArrayList<Pokemon>();
         init(aName, aRegion, aInitialPokemon);
     }
     
-    private void init(String aName, Region aRegion, Pokemon aInitialPokemon)
+    private void init(String aName, String aRegion, Pokemon aInitialPokemon)
     {
         this.setId(this.prepareID(++numTrainer));
         this.setName(aName);
         this.setRegion(aRegion);
-        this.setMoney(0);
+        this.setMoney(3000);
         this.setAPokemon(aInitialPokemon);
     }
     
     //Constructor para instanciar a un entrenador del que poseemos todos sus datos
-    public Trainer(String aName, Region aRegion, int aMoney, ArrayList<Pokemon> aPokemonsList)
+    public Trainer(String aName, String aRegion, int aMoney, ArrayList<Pokemon> aPokemonsList)
     {
         this.equipoPokemon = new ArrayList<Pokemon>();
         init(aName, aRegion, aMoney, aPokemonsList);
     }
 
-    private void init(String aName, Region aRegion, int aMoney, ArrayList<Pokemon> aPokemonsList)
+    private void init(String aName, String aRegion, int aMoney, ArrayList<Pokemon> aPokemonsList)
     {
         this.setId(this.prepareID(++numTrainer));
         this.setName(aName);
@@ -101,11 +101,11 @@ public class Trainer
 		this.name = name;
 	}
 
-	public Region getRegion() {
+	public String getRegion() {
 		return region;
 	}
 
-	public void setRegion(Region region) {
+	public void setRegion(String region) {
 		this.region = region;
 	}
 
@@ -153,7 +153,7 @@ public class Trainer
         String cad = "Datos de entrenador:"
                 + "\nID: " + this.getId() + "."
                 + "\nNombre: " + this.getName() + "."
-                + "\nRegion: " + this.region.getNombre() + "."  /////////////////////////////////////
+                + "\nRegion: " + this.getRegion() + "."  /////////////////////////////////////
                 + "\nDinero: " + this.getMoney() + "."
                 + "\nPokemons:";
         for (int i = 0; i < this.getEquipoPokemons().size(); i++)

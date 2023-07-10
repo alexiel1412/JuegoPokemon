@@ -105,6 +105,7 @@ public class Pokemon
     
     private void init(int numPokedex, String aName, String type1, String type2)
     {
+    	System.out.println("Hola");
     	this.setNumPokedex(numPokedex);
         this.setName(aName);
         this.setLevel(5);
